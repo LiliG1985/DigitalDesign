@@ -7,61 +7,93 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero */}
-      <section className="grid items-center gap-12 py-10 sm:py-16 lg:grid-cols-[1.15fr_1fr]">
-        <div>
-          <span className="eyebrow">● Now booking new projects</span>
-          <h1 className="mt-6 font-display text-4xl font-bold leading-[1.04] tracking-tight sm:text-5xl lg:text-6xl">
-            We build the website
-            <br />
-            your competitors
-            <br />
-            <span className="text-pink">wish they had.</span>
-          </h1>
-          <p className="mt-6 max-w-md text-lg leading-relaxed text-paper/80">
-            Custom-built, launch-ready sites for founders and brands who want to look like the
-            obvious best option. Pick a package, book your slot online, done.
-          </p>
-          <div className="mt-8 flex flex-wrap items-center gap-5">
-            <Link href="/book" className="btn-primary">
-              Book your build →
-            </Link>
-            <Link href="/work" className="btn-secondary">
-              See recent work
-            </Link>
+      <section className="relative overflow-hidden py-6 sm:py-10">
+        <div className="glow-blob pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-pink opacity-20" />
+        <div className="glow-blob pointer-events-none absolute -right-16 top-32 h-72 w-72 rounded-full bg-blue opacity-20" />
+        <div className="glow-blob pointer-events-none absolute bottom-0 left-1/3 h-56 w-56 rounded-full bg-yellow opacity-10" />
+
+        <div className="relative grid items-center gap-14 lg:grid-cols-[1.15fr_1fr]">
+          <div>
+            <h1 className="font-body text-4xl font-extrabold uppercase leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              We build the website
+              <br />
+              your competitors
+              <br />
+              <span className="text-gradient">wish they had</span>
+            </h1>
+            <div className="mt-7 h-px w-10 bg-paper/30" />
+            <p className="mt-7 max-w-md text-lg leading-relaxed text-muted">
+              Custom-built, launch-ready sites for founders and brands who want to look like the
+              obvious best option. Pick a package, book your slot online, done.
+            </p>
+
+            <div className="mt-9 flex flex-wrap items-center gap-5">
+              <Link href="/book" className="btn-primary">
+                Book your build
+              </Link>
+              <Link href="/work" className="btn-secondary">
+                See recent work
+              </Link>
+            </div>
+
+            <ul className="mt-12 flex flex-wrap gap-x-8 gap-y-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
+              <li>Websites</li>
+              <li>E-commerce</li>
+              <li>Branding</li>
+              <li>Digital strategy</li>
+            </ul>
           </div>
-          <div className="mt-10 flex flex-wrap gap-x-8 gap-y-3 border-t border-line pt-6 text-sm text-muted">
-            <span>Worldwide, remote-friendly</span>
-            <span>Fixed-price packages</span>
-            <span>Book &amp; pay a deposit online</span>
+
+          {/* Laptop mockup */}
+          <div className="relative mx-auto w-full max-w-md">
+            <div className="rounded-t-xl border border-line bg-card p-2 pb-0">
+              <div className="flex gap-1.5 px-2 py-1.5">
+                <i className="h-2 w-2 rounded-full bg-paper/15" />
+                <i className="h-2 w-2 rounded-full bg-paper/15" />
+                <i className="h-2 w-2 rounded-full bg-paper/15" />
+              </div>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-t-md bg-ink">
+                <div className="glow-blob absolute -right-12 -top-12 h-48 w-48 rounded-full bg-gradient-to-br from-pink via-yellow to-blue opacity-70" />
+                <div className="glow-blob absolute -bottom-16 -left-10 h-40 w-40 rounded-full bg-violet opacity-40" />
+                <div className="relative flex h-full flex-col justify-between p-6">
+                  <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
+                    <span className="text-paper">beyond.hello.</span>
+                    <span>Work · About · Contact</span>
+                  </div>
+                  <div>
+                    <span className="mb-2 block text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">01</span>
+                    <p className="font-body text-2xl font-extrabold uppercase leading-tight text-paper">
+                      More than
+                      <br />
+                      <span className="text-gradient">a website</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mx-auto h-3 w-[106%] -translate-x-[3%] rounded-b-2xl border border-t-0 border-line bg-card" />
           </div>
         </div>
 
-        <div className="relative hidden h-[380px] sm:block">
-          <div className="absolute left-[22%] top-0 z-30 w-[78%] -rotate-3 shadow-2xl">
-            <WorkTile label="Greenhouse Events UAE" tag="Event production" gradient="pink" tall />
-          </div>
-          <div className="absolute left-0 top-[110px] z-20 w-[78%] rotate-2 shadow-2xl">
-            <WorkTile label="Sonkei" tag="Web app" gradient="blue" tall />
-          </div>
-          <div className="absolute left-[16%] top-[220px] z-10 w-[78%] -rotate-2 shadow-2xl">
-            <WorkTile label="Your project here" tag="Booking now" gradient="mint" tall />
-          </div>
+        <div className="relative mt-16 flex flex-col gap-4 border-t border-line pt-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted sm:flex-row sm:items-center sm:justify-between">
+          <span>Dubai · Florida · Worldwide</span>
+          <span>Fixed pricing · Clear process · Real results</span>
         </div>
       </section>
 
       {/* Recent work strip */}
       <section className="border-t border-line py-16">
         <div className="mb-8 flex items-end justify-between">
-          <h2 className="font-display text-2xl font-bold">Recent work</h2>
-          <Link href="/work" className="btn-secondary text-sm">
+          <h2 className="font-body text-xl font-bold uppercase tracking-tight">Recent work</h2>
+          <Link href="/work" className="btn-secondary text-xs">
             View all
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
           <WorkTile label="Greenhouse Events UAE" tag="Event production · Dubai" gradient="pink" />
           <WorkTile label="Sonkei" tag="Web app" gradient="blue" />
-          <Link href="/book" className="flex flex-col items-center justify-center gap-2 rounded-xl border border-dashed border-line p-4 text-center text-sm text-muted transition-colors hover:border-pink hover:text-paper">
-            <span className="font-display text-lg font-bold text-paper">+</span>
+          <Link href="/book" className="flex flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-line p-4 text-center text-sm text-muted transition-colors hover:border-pink hover:text-paper">
+            <span className="font-body text-lg font-bold text-paper">+</span>
             Let's build yours next
           </Link>
         </div>
@@ -70,7 +102,7 @@ export default function HomePage() {
       {/* Pricing teaser */}
       <section className="border-t border-line py-16">
         <div className="mb-8">
-          <h2 className="font-display text-2xl font-bold">Packages</h2>
+          <h2 className="font-body text-xl font-bold uppercase tracking-tight">Packages</h2>
           <p className="mt-2 max-w-lg text-muted">
             Fixed pricing, so you know what you're booking. Pay a deposit to lock your slot —
             the balance is due before launch.
@@ -84,16 +116,16 @@ export default function HomePage() {
       </section>
 
       {/* CTA band */}
-      <section className="my-16 flex flex-col items-start gap-6 rounded-[22px] bg-gradient-to-br from-pink to-blue p-10 sm:flex-row sm:items-center sm:justify-between">
-        <h3 className="max-w-sm font-display text-2xl font-bold text-white sm:text-3xl">
-          Ready to stop blending in?
-        </h3>
-        <Link
-          href="/book"
-          className="inline-flex items-center justify-center rounded-full bg-ink px-7 py-4 font-bold text-white"
-        >
-          Book a free 20-min call →
-        </Link>
+      <section className="relative my-16 overflow-hidden rounded-xl border border-line bg-card p-10">
+        <div className="glow-blob pointer-events-none absolute -right-10 -top-16 h-56 w-56 rounded-full bg-gradient-to-br from-pink via-yellow to-blue opacity-25" />
+        <div className="relative flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+          <h3 className="max-w-sm font-body text-2xl font-extrabold uppercase tracking-tight sm:text-3xl">
+            Ready to <span className="text-gradient">stop blending in</span>?
+          </h3>
+          <Link href="/book" className="btn-primary border-paper/40">
+            Book a free 20-min call
+          </Link>
+        </div>
       </section>
     </main>
   );

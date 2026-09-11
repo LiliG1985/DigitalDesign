@@ -1,30 +1,29 @@
-const GRADIENTS = {
-  pink: "from-pink to-yellow",
-  blue: "from-blue to-mint",
-  yellow: "from-yellow to-pink",
-  mint: "from-mint to-blue",
+const GLOWS = {
+  pink: "from-pink via-yellow to-blue",
+  blue: "from-blue via-violet to-pink",
+  yellow: "from-yellow via-pink to-violet",
+  violet: "from-violet via-blue to-yellow",
 };
 
 export default function WorkTile({ label, tag, gradient = "pink", tall = false }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-line">
-      <div className="flex gap-1.5 px-3 py-2">
-        <i className="h-1.5 w-1.5 rounded-full bg-paper/30" />
-        <i className="h-1.5 w-1.5 rounded-full bg-paper/30" />
-        <i className="h-1.5 w-1.5 rounded-full bg-paper/30" />
+    <div className="overflow-hidden rounded-lg border border-line bg-card">
+      <div className="flex gap-1.5 px-3 py-2.5">
+        <i className="h-1.5 w-1.5 rounded-full bg-paper/15" />
+        <i className="h-1.5 w-1.5 rounded-full bg-paper/15" />
+        <i className="h-1.5 w-1.5 rounded-full bg-paper/15" />
       </div>
-      <div
-        className={`flex items-end bg-gradient-to-br p-4 ${GRADIENTS[gradient]} ${
-          tall ? "h-40" : "h-24"
-        }`}
-      >
-        <div>
+      <div className={`relative flex items-end overflow-hidden bg-ink p-4 ${tall ? "h-40" : "h-24"}`}>
+        <div
+          className={`glow-blob absolute -right-8 -top-8 h-28 w-28 rounded-full bg-gradient-to-br opacity-50 ${GLOWS[gradient]}`}
+        />
+        <div className="relative">
           {tag && (
-            <span className="mb-1 block text-[10px] font-bold uppercase tracking-wide text-ink/60">
+            <span className="mb-1 block text-[10px] font-semibold uppercase tracking-[0.15em] text-muted">
               {tag}
             </span>
           )}
-          <span className="font-display text-sm font-bold text-ink">{label}</span>
+          <span className="font-body text-sm font-bold text-paper">{label}</span>
         </div>
       </div>
     </div>

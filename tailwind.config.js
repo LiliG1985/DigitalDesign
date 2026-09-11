@@ -7,18 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ink: "#0b0b12",
-        card: "#151420",
-        line: "#2a2838",
-        paper: "#f5f4ff",
-        muted: "#a6a3c4",
-        pink: "#ff3d6e",
-        yellow: "#ffb800",
-        blue: "#4d5bff",
-        mint: "#00d9a3",
+        ink: "#08080b",
+        card: "#111116",
+        line: "#26262f",
+        paper: "#f5f5f7",
+        muted: "#93939f",
+        pink: "#ff2f7e",
+        yellow: "#ffb04d",
+        blue: "#34a6ff",
+        violet: "#7b5cff",
       },
       fontFamily: {
-        display: ["var(--font-unbounded)", "sans-serif"],
+        display: ["var(--font-manrope)", "sans-serif"],
         body: ["var(--font-manrope)", "sans-serif"],
       },
       borderRadius: {
