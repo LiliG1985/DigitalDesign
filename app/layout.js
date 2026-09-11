@@ -1,0 +1,38 @@
+import { Unbounded, Manrope } from "next/font/google";
+import "./globals.css";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+
+const unbounded = Unbounded({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  variable: "--font-unbounded",
+  display: "swap",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-manrope",
+  display: "swap",
+});
+
+export const metadata = {
+  title: "Beyond Hello — Websites built for what's next",
+  description:
+    "Custom-built, launch-ready websites for founders and brands who want to look like the obvious best option. Book your build online, worldwide.",
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className={`${unbounded.variable} ${manrope.variable}`}>
+      <body className="bg-ink text-paper font-body antialiased">
+        <div className="mx-auto max-w-6xl px-5">
+          <Nav />
+          {children}
+          <Footer />
+        </div>
+      </body>
+    </html>
+  );
+}
