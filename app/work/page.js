@@ -3,7 +3,7 @@ import WorkTile from "@/components/WorkTile";
 import PageBanner from "@/components/PageBanner";
 
 export const metadata = {
-  title: "Work — Beyond Hello",
+  title: "Work · Beyond Hello",
   description: "Recent website builds from Beyond Hello.",
 };
 
@@ -14,7 +14,7 @@ const PROJECTS = [
     gradient: "pink",
     href: "https://greenhouseeventsuae.com",
     description:
-      "A site for a luxury event production company operating across the UAE — private parties, corporate productions, staging, AV and 360° photobooths. Built around a large, image-led portfolio gallery so 20 years of event work does the talking.",
+      "A site for a luxury event production company operating across the UAE, covering private parties, corporate productions, staging, AV, and 360° photobooths. Built around a large, image-led portfolio gallery, so twenty years of event work speaks for itself.",
   },
   {
     name: "Sonkei",
@@ -22,7 +22,7 @@ const PROJECTS = [
     gradient: "blue",
     href: null,
     description:
-      "A custom web project, deployed on Vercel. Currently in a private preview — case study details coming soon.",
+      "A custom web project, deployed on Vercel and currently in private preview. Full case study coming soon.",
   },
 ];
 

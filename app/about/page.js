@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "About — Beyond Hello",
+  title: "About · Beyond Hello",
   description: "Why Beyond Hello exists, and how we work.",
 };
 
@@ -9,17 +9,17 @@ const STEPS = [
   {
     n: "01",
     label: "Ideas",
-    text: "A short scoping call to figure out what your site actually needs to do — and what it doesn't.",
+    text: "A short scoping call to figure out exactly what your site needs to do, and just as important, what it doesn't.",
   },
   {
     n: "02",
     label: "Design & develop",
-    text: "A custom build on a fixed timeline, with real progress you can see, not a black box.",
+    text: "A custom build on a fixed timeline, with real progress you can see along the way, not a black box.",
   },
   {
     n: "03",
     label: "Launch & beyond",
-    text: "You get a live, working site — plus a clear path for what to add next as the business grows.",
+    text: "You get a live, working site, plus a clear path for what to add next as the business grows.",
   },
 ];
 
@@ -36,14 +36,20 @@ export default function AboutPage() {
           </h1>
           <div className="mt-7 flex flex-col gap-5 text-lg leading-relaxed text-paper/80">
             <p>
-              Beyond Hello was built around a simple idea: a good first hello can turn into
-              something much bigger than you expected — if what comes after it holds up.
+              Every business has a first hello: the moment someone lands on your site and
+              decides, in about three seconds, whether to stay. That moment is too important to
+              leave to a generic template, and it's the whole reason Beyond Hello exists.
             </p>
             <p>
-              For most businesses today, a website <em>is</em> that first hello. It's the first
-              impression a customer forms before they ever speak to you. We build sites that
-              carry that hello beyond the first click — into a call booked, a sale made, a client
-              won.
+              For most businesses today, a website <em>is</em> that first hello. It's the
+              impression a customer forms before they ever speak to you, and it quietly decides
+              whether they stay or click away. We build sites that carry that hello further,
+              into a call booked, a sale made, a client won.
+            </p>
+            <p>
+              We work with founders and small teams worldwide, remotely, on fixed-price
+              packages, so you know exactly what you're getting before you book, and can go
+              from an idea to a live site in a matter of weeks.
             </p>
           </div>
           <Link href="/book" className="btn-primary mt-10">
@@ -87,8 +93,7 @@ export default function AboutPage() {
         />
         <div className="absolute inset-0 bg-ink/80" />
         <p className="relative max-w-2xl font-body text-2xl font-bold uppercase leading-snug tracking-tight text-paper sm:text-3xl">
-          We work with founders and small teams worldwide, remotely, on fixed-price
-          packages — so you know what you're getting before you book.
+          A website isn't the finish line. It's the handshake that starts everything else.
         </p>
       </section>
     </main>

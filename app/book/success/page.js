@@ -2,7 +2,7 @@ import Link from "next/link";
 import { getStripe } from "@/lib/stripe";
 
 export const metadata = {
-  title: "Booking confirmed — Beyond Hello",
+  title: "Booking confirmed · Beyond Hello",
 };
 
 export default async function BookingSuccessPage({ searchParams }) {
@@ -29,10 +29,10 @@ export default async function BookingSuccessPage({ searchParams }) {
       </h1>
       <p className="mx-auto mt-4 max-w-md text-lg text-paper/80">
         {paid
-          ? `Thanks${meta.name ? `, ${meta.name}` : ""} — your deposit for the ${
+          ? `Thanks${meta.name ? `, ${meta.name}` : ""}. Your deposit for the ${
               meta.packageName || "project"
-            } package is confirmed. We'll email you within 24 hours to lock in your exact build slot.`
-          : "We couldn't confirm a payment for this session. If you completed checkout, refresh this page in a moment — otherwise head back and try again."}
+            } package is confirmed, and we'll email you within 24 hours to lock in your exact build slot.`
+          : "We couldn't confirm a payment for this session. If you completed checkout, refresh this page in a moment. Otherwise, head back and try again."}
       </p>
       <Link href="/" className="btn-secondary mt-8 inline-block">
         Back to home

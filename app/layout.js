@@ -11,9 +11,9 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-  title: "Beyond Hello — Websites built for what's next",
+  title: "Beyond Hello · Websites built for what's next",
   description:
-    "Custom-built, launch-ready websites for founders and brands who want to look like the obvious best option. Book your build online, worldwide.",
+    "Custom-built, launch-ready websites for founders and brands who want their first hello to land. Book your build online, worldwide.",
 };
 
 export default function RootLayout({ children }) {

@@ -4,14 +4,14 @@ import PageBanner from "@/components/PageBanner";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Pricing — Beyond Hello",
+  title: "Pricing · Beyond Hello",
   description: "Fixed-price website packages. Book online and pay a deposit to lock your slot.",
 };
 
 const FAQS = [
   {
     q: "How does the deposit work?",
-    a: "You pay a deposit at booking to secure your build slot on the calendar. The remaining balance is invoiced once the site is ready to launch — you're never charged the full amount upfront.",
+    a: "You pay a deposit at booking to secure your build slot on the calendar. The remaining balance is invoiced once the site is ready to launch, so you're never charged the full amount upfront.",
   },
   {
     q: "What if my project doesn't fit a package?",
@@ -19,11 +19,11 @@ const FAQS = [
   },
   {
     q: "Do you work with clients outside your timezone?",
-    a: "Yes — this is a remote, worldwide studio. Calls are scheduled around your timezone, and updates happen async in between.",
+    a: "Yes. This is a remote, worldwide studio: calls are scheduled around your timezone, and updates happen asynchronously in between.",
   },
   {
     q: "What do you need from me to get started?",
-    a: "Your logo and brand assets if you have them, any copy or content you want included, and a few examples of sites you like. If you don't have all of that yet, that's normal — we'll figure it out together on the kickoff call.",
+    a: "Your logo and brand assets if you have them, any copy or content you want included, and a few examples of sites you like. If you don't have all of that yet, that's normal. We'll figure it out together on the kickoff call.",
   },
 ];
 

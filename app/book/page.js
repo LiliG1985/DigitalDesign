@@ -3,7 +3,7 @@ import PageBanner from "@/components/PageBanner";
 import { PACKAGE_LIST, getPackage } from "@/lib/packages";
 
 export const metadata = {
-  title: "Book — Beyond Hello",
+  title: "Book · Beyond Hello",
   description: "Book your website build and lock your slot with a deposit.",
 };
 
@@ -23,12 +23,13 @@ export default function BookPage({ searchParams }) {
       <PageBanner
         eyebrow="Book"
         title="Book your build"
-        subtitle="Pick a package and tell us a bit about the project. You'll pay a deposit to lock your slot — the rest is invoiced before launch."
+        subtitle="Pick a package and tell us a bit about the project. You'll pay a deposit to lock your slot, and the rest is invoiced before launch."
       />
 
       {cancelled && (
         <p className="mb-8 rounded-lg border border-yellow/30 bg-yellow/10 px-4 py-3 text-sm text-yellow">
-          Checkout was cancelled — no payment was taken. You can pick up where you left off below.
+          Checkout was cancelled. No payment was taken, so you can pick up where you left off
+          below.
         </p>
       )}
 

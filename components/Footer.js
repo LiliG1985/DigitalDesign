@@ -15,7 +15,7 @@ export default function Footer() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const subject = encodeURIComponent("Keep me posted — Beyond Hello");
+    const subject = encodeURIComponent("Keep me posted, Beyond Hello");
     const body = encodeURIComponent(`Please add me to the list: ${email}`);
     window.location.href = `mailto:hello@beyondhello.digital?subject=${subject}&body=${body}`;
   }

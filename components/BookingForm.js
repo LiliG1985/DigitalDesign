@@ -47,7 +47,7 @@ export default function BookingForm({ initialPackage }) {
       window.location.href = data.url;
     } catch (err) {
       setStatus("error");
-      setError("Network error — please check your connection and try again.");
+      setError("Network error. Please check your connection and try again.");
     }
   }
 
@@ -65,7 +65,7 @@ export default function BookingForm({ initialPackage }) {
         >
           {PACKAGE_LIST.map((p) => (
             <option key={p.id} value={p.id}>
-              {p.name} — {p.price ? `$${p.price.toLocaleString()}` : `from $${p.priceFrom.toLocaleString()}`}
+              {p.name} · {p.price ? `$${p.price.toLocaleString()}` : `from $${p.priceFrom.toLocaleString()}`}
             </option>
           ))}
         </select>
@@ -154,7 +154,7 @@ export default function BookingForm({ initialPackage }) {
           : `Pay $${pkg?.deposit.toLocaleString()} deposit to book →`}
       </button>
       <p className="text-xs text-muted">
-        You'll pay securely via Stripe. This deposit locks your build slot — the remaining
+        You'll pay securely via Stripe. This deposit locks your build slot, and the remaining
         balance is invoiced before launch.
       </p>
     </form>

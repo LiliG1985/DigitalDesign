@@ -20,7 +20,7 @@ async function notifyByEmail(session) {
       body: JSON.stringify({
         from: "Beyond Hello Bookings <bookings@resend.dev>",
         to: [process.env.NOTIFY_EMAIL],
-        subject: `New booking: ${m.packageName || "package"} — $${amount} deposit paid`,
+        subject: `New booking: ${m.packageName || "package"}, $${amount} deposit paid`,
         text: [
           `New paid booking on Beyond Hello.`,
           ``,
@@ -43,7 +43,7 @@ async function notifyByEmail(session) {
 export async function POST(request) {
   const stripe = getStripe();
   if (!stripe || !process.env.STRIPE_WEBHOOK_SECRET) {
-    // Webhook not configured yet — accept quietly so Stripe doesn't retry forever.
+    // Webhook not configured yet, so accept quietly and let Stripe move on.
     return NextResponse.json({ received: true, configured: false });
   }
 

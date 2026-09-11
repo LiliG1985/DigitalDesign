@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Contact — Beyond Hello",
+  title: "Contact · Beyond Hello",
   description: "Get in touch with Beyond Hello.",
 };
 
@@ -18,8 +18,8 @@ export default function ContactPage() {
             Say <span className="text-gradient">hello.</span>
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-paper/80">
-            The fastest way to get started is to book a package directly — but if you've got
-            questions first, reach out here.
+            The fastest way to get started is to book a package directly. Got questions first?
+            Reach out here.
           </p>
 
           <div className="mt-9 flex flex-col gap-5 sm:flex-row sm:items-center">

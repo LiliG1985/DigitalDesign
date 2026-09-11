@@ -23,8 +23,10 @@ export default function HomePage() {
             </h1>
             <div className="mt-7 h-px w-10 bg-paper/30" />
             <p className="mt-7 max-w-md text-lg leading-relaxed text-muted">
-              Custom-built, launch-ready sites for founders and brands who want to look like the
-              obvious best option. Pick a package, book your slot online, done.
+              A website is the first conversation you have with a customer, so it should sound
+              like you, not like everyone else's template. We build custom, launch-ready sites
+              for founders and brands who want that first hello to land. Pick a package, book
+              your slot, and we take it from there.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-5">
@@ -84,8 +86,8 @@ export default function HomePage() {
         <div className="mb-8">
           <h2 className="font-body text-xl font-bold uppercase tracking-tight">Packages</h2>
           <p className="mt-2 max-w-lg text-muted">
-            Fixed pricing, so you know what you're booking. Pay a deposit to lock your slot —
-            the balance is due before launch.
+            Fixed pricing, so you always know what you're booking. Lock your slot with a
+            deposit, and the balance is due before launch.
           </p>
         </div>
         <div className="grid gap-5 sm:grid-cols-3">

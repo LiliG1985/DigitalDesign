@@ -9,7 +9,7 @@ export async function POST(request) {
     return NextResponse.json(
       {
         error:
-          "Payments aren't switched on yet — add STRIPE_SECRET_KEY in the Vercel project settings to enable checkout.",
+          "Payments aren't switched on yet. Add STRIPE_SECRET_KEY in the Vercel project settings to enable checkout.",
       },
       { status: 503 }
     );
@@ -45,7 +45,7 @@ export async function POST(request) {
             currency: "usd",
             unit_amount: Math.round(depositAmount * 100),
             product_data: {
-              name: `${pkg.name} package — booking deposit`,
+              name: `${pkg.name} package: booking deposit`,
               description:
                 "Secures your build slot. The remaining balance is invoiced before launch.",
             },

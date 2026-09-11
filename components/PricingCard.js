@@ -10,7 +10,7 @@ export default function PricingCard({ pkg }) {
       }`}
     >
       <span className={`text-[11px] font-semibold uppercase tracking-[0.2em] ${pkg.featured ? "text-pink" : "text-muted"}`}>
-        {pkg.name}{pkg.featured ? " — most booked" : ""}
+        {pkg.name}{pkg.featured ? " · Most booked" : ""}
       </span>
       <div className="flex items-baseline gap-1 font-body text-3xl font-bold">
         {priceLabel}
