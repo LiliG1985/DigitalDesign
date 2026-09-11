@@ -11,19 +11,40 @@ const CONTACT_EMAIL = "hello@beyondhello.digital";
 export default function ContactPage() {
   return (
     <main className="py-14">
-      <h1 className="font-display text-4xl font-bold sm:text-5xl">Say hello</h1>
-      <p className="mt-4 max-w-xl text-lg text-paper/80">
-        The fastest way to get started is to book a package directly — but if you've got
-        questions first, reach out here.
-      </p>
+      <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <div>
+          <span className="eyebrow">Contact</span>
+          <h1 className="mt-5 font-body text-4xl font-extrabold uppercase leading-[1.05] tracking-tight sm:text-5xl">
+            Say <span className="text-gradient">hello.</span>
+          </h1>
+          <p className="mt-6 max-w-md text-lg leading-relaxed text-paper/80">
+            The fastest way to get started is to book a package directly — but if you've got
+            questions first, reach out here.
+          </p>
 
-      <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:items-center">
-        <a href={`mailto:${CONTACT_EMAIL}`} className="btn-primary">
-          {CONTACT_EMAIL}
-        </a>
-        <Link href="/book" className="btn-secondary">
-          Or skip ahead and book →
-        </Link>
+          <div className="mt-9 flex flex-col gap-5 sm:flex-row sm:items-center">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="btn-primary">
+              {CONTACT_EMAIL}
+            </a>
+            <Link href="/book" className="btn-secondary">
+              Or skip ahead and book →
+            </Link>
+          </div>
+
+          <div className="mt-14 flex flex-wrap gap-x-10 gap-y-4 border-t border-line pt-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
+            <span>Dubai · Florida · Worldwide</span>
+            <span>Replies within 1 business day</span>
+          </div>
+        </div>
+
+        <div className="relative mx-auto w-full max-w-xs">
+          <div className="glow-blob absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-gradient-to-br from-blue via-violet to-pink opacity-30" />
+          <img
+            src="/images/desk-detail.jpg"
+            alt="Studio desk detail, lit by neon light"
+            className="relative w-full rounded-xl border border-line object-cover shadow-2xl"
+          />
+        </div>
       </div>
     </main>
   );

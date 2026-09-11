@@ -1,5 +1,6 @@
 import Link from "next/link";
 import WorkTile from "@/components/WorkTile";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata = {
   title: "Work — Beyond Hello",
@@ -27,13 +28,14 @@ const PROJECTS = [
 
 export default function WorkPage() {
   return (
-    <main className="py-14">
-      <h1 className="font-display text-4xl font-bold sm:text-5xl">Recent work</h1>
-      <p className="mt-4 max-w-xl text-lg text-paper/80">
-        A look at what's shipped so far. More case studies are added as projects launch.
-      </p>
+    <main className="pb-14">
+      <PageBanner
+        eyebrow="Portfolio"
+        title="Recent work"
+        subtitle="A look at what's shipped so far. More case studies are added as projects launch."
+      />
 
-      <div className="mt-12 grid gap-8 sm:grid-cols-2">
+      <div className="grid gap-8 sm:grid-cols-2">
         {PROJECTS.map((project) => (
           <div key={project.name} className="flex flex-col gap-4">
             <WorkTile label={project.name} tag={project.tag} gradient={project.gradient} tall />

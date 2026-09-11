@@ -1,5 +1,6 @@
 import { PACKAGE_LIST } from "@/lib/packages";
 import PricingCard from "@/components/PricingCard";
+import PageBanner from "@/components/PageBanner";
 import Link from "next/link";
 
 export const metadata = {
@@ -28,14 +29,14 @@ const FAQS = [
 
 export default function PricingPage() {
   return (
-    <main className="py-14">
-      <h1 className="font-display text-4xl font-bold sm:text-5xl">Packages</h1>
-      <p className="mt-4 max-w-xl text-lg text-paper/80">
-        Fixed pricing, so you know exactly what you're booking. Pick a package, pay a deposit to
-        lock your build slot, and the rest happens on the calendar.
-      </p>
+    <main className="pb-14">
+      <PageBanner
+        eyebrow="Pricing"
+        title="Packages"
+        subtitle="Fixed pricing, so you know exactly what you're booking. Pick a package, pay a deposit to lock your build slot, and the rest happens on the calendar."
+      />
 
-      <div className="mt-12 grid gap-5 sm:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-3">
         {PACKAGE_LIST.map((pkg) => (
           <PricingCard key={pkg.id} pkg={pkg} />
         ))}
