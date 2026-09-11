@@ -46,32 +46,12 @@ export default function HomePage() {
 
           {/* Laptop mockup */}
           <div className="relative mx-auto w-full max-w-md">
-            <div className="rounded-t-xl border border-line bg-card p-2 pb-0">
-              <div className="flex gap-1.5 px-2 py-1.5">
-                <i className="h-2 w-2 rounded-full bg-paper/15" />
-                <i className="h-2 w-2 rounded-full bg-paper/15" />
-                <i className="h-2 w-2 rounded-full bg-paper/15" />
-              </div>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-t-md bg-ink">
-                <div className="glow-blob absolute -right-12 -top-12 h-48 w-48 rounded-full bg-gradient-to-br from-pink via-yellow to-blue opacity-70" />
-                <div className="glow-blob absolute -bottom-16 -left-10 h-40 w-40 rounded-full bg-violet opacity-40" />
-                <div className="relative flex h-full flex-col justify-between p-6">
-                  <div className="flex items-center justify-between text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">
-                    <span className="text-paper">beyond.hello.</span>
-                    <span>Work · About · Contact</span>
-                  </div>
-                  <div>
-                    <span className="mb-2 block text-[10px] font-semibold uppercase tracking-[0.2em] text-muted">01</span>
-                    <p className="font-body text-2xl font-extrabold uppercase leading-tight text-paper">
-                      More than
-                      <br />
-                      <span className="text-gradient">a website</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="mx-auto h-3 w-[106%] -translate-x-[3%] rounded-b-2xl border border-t-0 border-line bg-card" />
+            <div className="glow-blob absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-pink via-yellow to-blue opacity-40" />
+            <img
+              src="/images/hero-laptop.jpg"
+              alt="beyond.hello website shown on a laptop, in a neon-lit studio"
+              className="relative w-full rounded-xl border border-line object-cover shadow-2xl"
+            />
           </div>
         </div>
 
@@ -116,10 +96,16 @@ export default function HomePage() {
       </section>
 
       {/* CTA band */}
-      <section className="relative my-16 overflow-hidden rounded-xl border border-line bg-card p-10">
-        <div className="glow-blob pointer-events-none absolute -right-10 -top-16 h-56 w-56 rounded-full bg-gradient-to-br from-pink via-yellow to-blue opacity-25" />
+      <section className="relative my-16 overflow-hidden rounded-xl border border-line p-10">
+        <img
+          src="/images/cta-band.jpg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-ink/70" />
         <div className="relative flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
-          <h3 className="max-w-sm font-body text-2xl font-extrabold uppercase tracking-tight sm:text-3xl">
+          <h3 className="max-w-sm font-body text-2xl font-extrabold uppercase tracking-tight text-paper sm:text-3xl">
             Ready to <span className="text-gradient">stop blending in</span>?
           </h3>
           <Link href="/book" className="btn-primary border-paper/40">

@@ -21,8 +21,15 @@ export default function Footer() {
   }
 
   return (
-    <footer className="mt-24 border-t border-line pb-14 pt-16">
-      <div className="flex flex-col gap-8 border-b border-line pb-12 sm:flex-row sm:items-end sm:justify-between">
+    <footer className="relative mt-24 overflow-hidden border-t border-line pb-14 pt-16">
+      <img
+        src="/images/footer-scene.jpg"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover opacity-30"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/95 to-ink/60" />
+      <div className="relative flex flex-col gap-8 border-b border-line pb-12 sm:flex-row sm:items-end sm:justify-between">
         <h2 className="max-w-sm font-body text-2xl font-bold uppercase tracking-tight sm:text-3xl">
           Let's build something bolder
         </h2>
@@ -45,7 +52,7 @@ export default function Footer() {
         </form>
       </div>
 
-      <div className="mt-10 flex flex-col gap-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted sm:flex-row sm:items-center sm:justify-between">
+      <div className="relative mt-10 flex flex-col gap-6 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted sm:flex-row sm:items-center sm:justify-between">
         <div className="flex gap-6">
           {SOCIALS.map((s) => (
             <a key={s.label} href={s.href} className="transition-colors hover:text-paper">
