@@ -17,7 +17,7 @@ export default function UaePage() {
   return (
     <main className="pb-14">
       <PageBanner
-        eyebrow="🇦🇪 UAE"
+        eyebrow="🇦🇪 Dubai, UAE"
         title="Built in Dubai, for Dubai"
         subtitle="Fixed-price website builds for UAE businesses, priced in AED against what the local market actually charges, not a generic international rate card."
       />
@@ -94,7 +94,7 @@ export default function UaePage() {
             Not in the UAE? <span className="text-gradient">See the USA page</span>
           </h3>
           <Link href="/usa" className="btn-primary border-paper/40">
-            🇺🇸 USA clients →
+            🇺🇸 Florida, USA →
           </Link>
         </div>
       </section>

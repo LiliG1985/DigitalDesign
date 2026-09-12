@@ -16,7 +16,7 @@ export default function UsaPage() {
   return (
     <main className="pb-14">
       <PageBanner
-        eyebrow="🇺🇸 USA"
+        eyebrow="🇺🇸 Florida, USA"
         title="Remote-built, US-priced"
         subtitle="Fixed-price website builds for US businesses, quoted in USD, with a studio that already runs on Florida hours as much as Dubai ones."
       />
@@ -88,7 +88,7 @@ export default function UsaPage() {
             Based in the UAE? <span className="text-gradient">See the UAE page</span>
           </h3>
           <Link href="/uae" className="btn-primary border-paper/40">
-            🇦🇪 UAE clients →
+            🇦🇪 Dubai, UAE →
           </Link>
         </div>
       </section>
