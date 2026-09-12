@@ -1,5 +1,6 @@
-import { PACKAGE_LIST } from "@/lib/packages";
+import { PACKAGE_LIST, MAINTENANCE_PLANS } from "@/lib/packages";
 import PricingCard from "@/components/PricingCard";
+import MaintenanceCard from "@/components/MaintenanceCard";
 import PageBanner from "@/components/PageBanner";
 import Link from "next/link";
 
@@ -29,6 +30,10 @@ const FAQS = [
     q: "What do you need from me to get started?",
     a: "Your logo and brand assets if you have them, any copy or content you want included, and a few examples of sites you like. If you don't have all of that yet, that's normal. We'll figure it out together on the kickoff call.",
   },
+  {
+    q: "Do I need a Care plan?",
+    a: "No, every site launches in working order without one. A Care plan just covers what happens after: keeping software updated, backups running, and small edits handled without you needing to open a ticket somewhere else.",
+  },
 ];
 
 export default function PricingPage() {
@@ -41,11 +46,9 @@ export default function PricingPage() {
       />
 
       <p className="mb-12 max-w-2xl text-sm leading-relaxed text-muted">
-        These numbers are priced against the real Dubai market for 2026, not a generic
-        international rate card. A basic brochure site here typically runs a few thousand
-        dirhams; a proper custom build with real functionality starts climbing from there fast.
-        The packages below sit at the honest end of that range: enough to build something that
-        actually holds up, without agency overhead padding the invoice.
+        These numbers sit at the competitive, well-run end of the real 2026 Dubai market, not a
+        padded agency rate card. You're paying for the build itself: no unnecessary layers
+        between you and the people doing the work.
       </p>
 
       <div className="grid gap-5 sm:grid-cols-3">
@@ -53,6 +56,22 @@ export default function PricingPage() {
           <PricingCard key={pkg.id} pkg={pkg} />
         ))}
       </div>
+
+      <section className="mt-20 border-t border-line pt-16">
+        <span className="eyebrow">Optional</span>
+        <h2 className="mt-4 font-body text-xl font-bold uppercase tracking-tight">
+          Ongoing care
+        </h2>
+        <p className="mt-3 max-w-lg text-muted">
+          Once a site is live, someone still has to keep it updated, backed up, and current.
+          Add a Care plan whenever you want that handled, no long-term contract required.
+        </p>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 sm:max-w-2xl">
+          {MAINTENANCE_PLANS.map((plan) => (
+            <MaintenanceCard key={plan.id} plan={plan} />
+          ))}
+        </div>
+      </section>
 
       <section className="mt-20 grid gap-10 lg:grid-cols-[1fr_0.7fr] lg:items-start">
         <div className="max-w-2xl">
