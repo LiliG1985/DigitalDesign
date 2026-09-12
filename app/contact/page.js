@@ -5,8 +5,9 @@ export const metadata = {
   description: "Get in touch with Beyond Hello.",
 };
 
-// TODO (Lili): swap in your real inbox + socials once the domain is set up.
+// TODO (Lili): swap in your real inbox once the domain is set up.
 const CONTACT_EMAIL = "hello@beyondhello.digital";
+const WHATSAPP_LINK = "https://wa.me/971552537712";
 
 export default function ContactPage() {
   return (
@@ -22,8 +23,16 @@ export default function ContactPage() {
             Reach out here.
           </p>
 
-          <div className="mt-9 flex flex-col gap-5 sm:flex-row sm:items-center">
-            <a href={`mailto:${CONTACT_EMAIL}`} className="btn-primary">
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-primary"
+            >
+              Message us on WhatsApp
+            </a>
+            <a href={`mailto:${CONTACT_EMAIL}`} className="btn-secondary">
               {CONTACT_EMAIL}
             </a>
             <Link href="/book" className="btn-secondary">
