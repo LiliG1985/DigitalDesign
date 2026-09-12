@@ -72,8 +72,18 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-          <WorkTile label="Greenhouse Events UAE" tag="Event production · Dubai" gradient="pink" />
-          <WorkTile label="Sonkei" tag="Web app" gradient="blue" />
+          <WorkTile
+            label="Greenhouse Events UAE"
+            tag="Event production · Dubai"
+            gradient="pink"
+            image="/images/work/greenhouse.jpg"
+          />
+          <WorkTile
+            label="Sonkei Co."
+            tag="Apparel, nutrition & skincare"
+            gradient="blue"
+            image="/images/work/sonkei.jpg"
+          />
           <Link href="/book" className="flex flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-line p-4 text-center text-sm text-muted transition-colors hover:border-pink hover:text-paper">
             <span className="font-body text-lg font-bold text-paper">+</span>
             Let's build yours next

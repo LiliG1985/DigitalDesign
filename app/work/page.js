@@ -12,17 +12,19 @@ const PROJECTS = [
     name: "Greenhouse Events UAE",
     tag: "Event production · Dubai",
     gradient: "pink",
+    image: "/images/work/greenhouse.jpg",
     href: "https://greenhouseeventsuae.com",
     description:
       "A site for a luxury event production company operating across the UAE, covering private parties, corporate productions, staging, AV, and 360° photobooths. Built around a large, image-led portfolio gallery, so twenty years of event work speaks for itself.",
   },
   {
-    name: "Sonkei",
-    tag: "Web app",
+    name: "Sonkei Co.",
+    tag: "Apparel, nutrition & skincare · E-commerce",
     gradient: "blue",
-    href: null,
+    image: "/images/work/sonkei.jpg",
+    href: "https://www.sonkei.co.com",
     description:
-      "A custom web project, deployed on Vercel and currently in private preview. Full case study coming soon.",
+      "A lifestyle brand spanning apparel, nutrition, and skincare under one storefront. The build carries a single editorial mood across three very different product lines, so the site reads as one brand rather than three shops stitched together.",
   },
 ];
 
@@ -38,7 +40,13 @@ export default function WorkPage() {
       <div className="grid gap-8 sm:grid-cols-2">
         {PROJECTS.map((project) => (
           <div key={project.name} className="flex flex-col gap-4">
-            <WorkTile label={project.name} tag={project.tag} gradient={project.gradient} tall />
+            <WorkTile
+              label={project.name}
+              tag={project.tag}
+              gradient={project.gradient}
+              image={project.image}
+              tall
+            />
             <p className="text-sm text-muted">{project.description}</p>
             {project.href && (
               <a
