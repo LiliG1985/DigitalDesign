@@ -70,15 +70,13 @@ export default function UaePage() {
       </div>
 
       <section className="mt-20 border-t border-line pt-16">
-        <h2 className="font-body text-xl font-bold uppercase tracking-tight">
-          Packages, priced in AED
-        </h2>
+        <h2 className="font-body text-xl font-bold uppercase tracking-tight">UAE Packages</h2>
         <p className="mt-2 max-w-lg text-muted">
-          Same fixed-price packages as everywhere else, shown in your currency first.
+          Fixed-price packages, quoted in dirhams, no conversion needed.
         </p>
         <div className="mt-8 grid gap-5 sm:grid-cols-3">
           {PACKAGE_LIST.map((pkg) => (
-            <PricingCard key={pkg.id} pkg={pkg} primaryCurrency="aed" />
+            <PricingCard key={pkg.id} pkg={pkg} primaryCurrency="aed" singleCurrency />
           ))}
         </div>
       </section>

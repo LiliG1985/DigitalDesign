@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function PricingCard({ pkg, primaryCurrency = "usd" }) {
+export default function PricingCard({ pkg, primaryCurrency = "usd", singleCurrency = false }) {
   const usdLabel = pkg.price ? `$${pkg.price.toLocaleString()}` : `From $${pkg.priceFrom.toLocaleString()}`;
   const aedValue = pkg.aed || pkg.aedFrom;
   const aedLabel = aedValue
@@ -9,7 +9,7 @@ export default function PricingCard({ pkg, primaryCurrency = "usd" }) {
 
   const showAedFirst = primaryCurrency === "aed" && aedLabel;
   const primaryLabel = showAedFirst ? aedLabel : usdLabel;
-  const secondaryLabel = showAedFirst ? usdLabel : aedLabel;
+  const secondaryLabel = singleCurrency ? null : showAedFirst ? usdLabel : aedLabel;
 
   return (
     <div

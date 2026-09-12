@@ -64,15 +64,13 @@ export default function UsaPage() {
       </div>
 
       <section className="mt-20 border-t border-line pt-16">
-        <h2 className="font-body text-xl font-bold uppercase tracking-tight">
-          Packages, priced in USD
-        </h2>
+        <h2 className="font-body text-xl font-bold uppercase tracking-tight">USA Packages</h2>
         <p className="mt-2 max-w-lg text-muted">
-          Same fixed-price packages as everywhere else, no currency conversion required.
+          Fixed-price packages, quoted in dollars, no conversion needed.
         </p>
         <div className="mt-8 grid gap-5 sm:grid-cols-3">
           {PACKAGE_LIST.map((pkg) => (
-            <PricingCard key={pkg.id} pkg={pkg} primaryCurrency="usd" />
+            <PricingCard key={pkg.id} pkg={pkg} primaryCurrency="usd" singleCurrency />
           ))}
         </div>
       </section>
