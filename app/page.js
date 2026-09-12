@@ -1,7 +1,5 @@
 import Link from "next/link";
 import WorkTile from "@/components/WorkTile";
-import { PACKAGE_LIST } from "@/lib/packages";
-import PricingCard from "@/components/PricingCard";
 
 export default function HomePage() {
   return (
@@ -66,23 +64,48 @@ export default function HomePage() {
       </section>
 
       {/* Region picker */}
-      <section className="flex flex-col items-center gap-5 border-t border-line py-10 text-center sm:flex-row sm:justify-center sm:gap-10">
-        <Link
-          href="/uae"
-          className="group flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-paper/80 transition-colors hover:text-pink"
-        >
-          <span className="text-lg">🇦🇪</span>
-          Dubai, UAE
-          <span className="transition-transform group-hover:translate-x-1">→</span>
-        </Link>
-        <Link
-          href="/usa"
-          className="group flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.15em] text-paper/80 transition-colors hover:text-blue"
-        >
-          <span className="text-lg">🇺🇸</span>
-          Florida, USA
-          <span className="transition-transform group-hover:translate-x-1">→</span>
-        </Link>
+      <section className="border-t border-line py-16">
+        <div className="mb-8 max-w-lg">
+          <span className="eyebrow">Two locations</span>
+          <h2 className="mt-4 font-body text-xl font-bold uppercase tracking-tight sm:text-2xl">
+            Dubai, UAE and Florida, USA
+          </h2>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2">
+          <Link
+            href="/uae"
+            className="group flex items-center justify-between gap-4 rounded-lg border border-line bg-card p-6 transition-colors hover:border-pink"
+          >
+            <div>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
+                🇦🇪 Dubai, UAE
+              </span>
+              <p className="mt-2 text-sm text-muted">
+                Packages priced in AED, local time zone, WhatsApp on hand.
+              </p>
+            </div>
+            <span className="text-xl text-paper/60 transition-transform group-hover:translate-x-1">
+              →
+            </span>
+          </Link>
+
+          <Link
+            href="/usa"
+            className="group flex items-center justify-between gap-4 rounded-lg border border-line bg-card p-6 transition-colors hover:border-blue"
+          >
+            <div>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
+                🇺🇸 Florida, USA
+              </span>
+              <p className="mt-2 text-sm text-muted">
+                Packages priced in USD, built around US business hours.
+              </p>
+            </div>
+            <span className="text-xl text-paper/60 transition-transform group-hover:translate-x-1">
+              →
+            </span>
+          </Link>
+        </div>
       </section>
 
       {/* Why it matters */}
@@ -139,22 +162,6 @@ export default function HomePage() {
             <span className="font-body text-lg font-bold text-paper">+</span>
             Let's build yours next
           </Link>
-        </div>
-      </section>
-
-      {/* Pricing teaser */}
-      <section className="border-t border-line py-16">
-        <div className="mb-8">
-          <h2 className="font-body text-xl font-bold uppercase tracking-tight">Packages</h2>
-          <p className="mt-2 max-w-lg text-muted">
-            Fixed pricing, so you always know what you're booking. Lock your slot with a
-            deposit, and the balance is due before launch.
-          </p>
-        </div>
-        <div className="grid gap-5 sm:grid-cols-3">
-          {PACKAGE_LIST.map((pkg) => (
-            <PricingCard key={pkg.id} pkg={pkg} />
-          ))}
         </div>
       </section>
 

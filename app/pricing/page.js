@@ -56,6 +56,14 @@ export default function PricingPage() {
           <PricingCard key={pkg.id} pkg={pkg} />
         ))}
       </div>
+      <a
+        href="https://wa.me/971552537712"
+        target="_blank"
+        rel="noreferrer"
+        className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-paper/80 transition-colors hover:text-pink"
+      >
+        Questions about a package? Message us on WhatsApp →
+      </a>
 
       <section className="mt-20 border-t border-line pt-16">
         <span className="eyebrow">Optional</span>
