@@ -65,6 +65,57 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Region picker */}
+      <section className="border-t border-line py-16">
+        <div className="mb-8 max-w-lg">
+          <span className="eyebrow">Where you're building from</span>
+          <h2 className="mt-4 font-body text-xl font-bold uppercase tracking-tight sm:text-2xl">
+            One studio, two markets
+          </h2>
+          <p className="mt-3 text-muted">
+            Beyond Hello runs between Dubai and Florida, so pricing and calls are set up around
+            whichever side of the world your business is on.
+          </p>
+        </div>
+        <div className="grid gap-5 sm:grid-cols-2">
+          <Link
+            href="/uae"
+            className="group flex items-center justify-between gap-4 rounded-lg border border-line bg-card p-7 transition-colors hover:border-pink"
+          >
+            <div>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
+                UAE clients
+              </span>
+              <h3 className="mt-2 font-body text-xl font-bold uppercase tracking-tight">
+                Priced in AED
+              </h3>
+              <p className="mt-2 text-sm text-muted">
+                Dubai-market pricing, local time zone, Arabic-ready builds.
+              </p>
+            </div>
+            <span className="text-3xl transition-transform group-hover:translate-x-1">🇦🇪</span>
+          </Link>
+
+          <Link
+            href="/usa"
+            className="group flex items-center justify-between gap-4 rounded-lg border border-line bg-card p-7 transition-colors hover:border-blue"
+          >
+            <div>
+              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
+                USA clients
+              </span>
+              <h3 className="mt-2 font-body text-xl font-bold uppercase tracking-tight">
+                Priced in USD
+              </h3>
+              <p className="mt-2 text-sm text-muted">
+                Florida-rooted, remote-first, built around US business hours.
+              </p>
+            </div>
+            <span className="text-3xl transition-transform group-hover:translate-x-1">🇺🇸</span>
+          </Link>
+        </div>
+      </section>
+
       {/* Why it matters */}
       <section className="grid items-center gap-12 border-t border-line py-16 lg:grid-cols-[0.85fr_1.15fr]">
         <div className="relative mx-auto w-full max-w-sm">
