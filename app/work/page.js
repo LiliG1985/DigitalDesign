@@ -14,8 +14,10 @@ const PROJECTS = [
     gradient: "pink",
     image: "/images/work/greenhouse.jpg",
     href: "https://greenhouseeventsuae.com",
-    description:
-      "A site for a luxury event production company operating across the UAE, covering private parties, corporate productions, staging, AV, and 360° photobooths. Built around a large, image-led portfolio gallery, so twenty years of event work speaks for itself.",
+    brief:
+      "A UAE-based production company running project management, entertainment, event coordination, venue dressing, fabrications, furniture rental, and wardrobe & costume, all under one roof. The old site buried that range behind a generic template that could have belonged to anyone.",
+    build:
+      "A black-and-gold, image-led design that reads more like a luxury hospitality brand than a typical services site: full-bleed photography, a portfolio gallery built to carry the weight of real event work, and a service breakdown that finally shows the full scope of what they actually run, in one glance instead of a buried dropdown menu.",
   },
   {
     name: "Sonkei Co.",
@@ -23,8 +25,10 @@ const PROJECTS = [
     gradient: "blue",
     image: "/images/work/sonkei.jpg",
     href: "https://www.sonkei.co.com",
-    description:
-      "A lifestyle brand spanning apparel, nutrition, and skincare under one storefront. The build carries a single editorial mood across three very different product lines, so the site reads as one brand rather than three shops stitched together.",
+    brief:
+      "A lifestyle brand selling across three categories, apparel, nutrition, and skincare, that risked feeling like three unrelated shops sharing a logo.",
+    build:
+      "One editorial mood carried across all three: warm lifestyle photography, a single confident headline treatment, and navigation that lets a shopper move between categories without ever feeling like they left the brand. Full storefront, cart, and checkout under one roof.",
   },
 ];
 
@@ -47,7 +51,20 @@ export default function WorkPage() {
               image={project.image}
               tall
             />
-            <p className="text-sm text-muted">{project.description}</p>
+            <div className="flex flex-col gap-3 text-sm text-muted">
+              <div>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-paper/60">
+                  The brief
+                </span>
+                <p className="mt-1 leading-relaxed">{project.brief}</p>
+              </div>
+              <div>
+                <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-paper/60">
+                  The build
+                </span>
+                <p className="mt-1 leading-relaxed">{project.build}</p>
+              </div>
+            </div>
             {project.href && (
               <a
                 href={project.href}

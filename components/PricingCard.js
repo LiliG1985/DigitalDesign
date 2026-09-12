@@ -2,6 +2,10 @@ import Link from "next/link";
 
 export default function PricingCard({ pkg }) {
   const priceLabel = pkg.price ? `$${pkg.price.toLocaleString()}` : `From $${pkg.priceFrom.toLocaleString()}`;
+  const aedValue = pkg.aed || pkg.aedFrom;
+  const aedLabel = aedValue
+    ? `${pkg.aedFrom ? "From " : ""}AED ${aedValue.toLocaleString()}`
+    : null;
 
   return (
     <div
@@ -12,8 +16,11 @@ export default function PricingCard({ pkg }) {
       <span className={`text-[11px] font-semibold uppercase tracking-[0.2em] ${pkg.featured ? "text-pink" : "text-muted"}`}>
         {pkg.name}{pkg.featured ? " · Most booked" : ""}
       </span>
-      <div className="flex items-baseline gap-1 font-body text-3xl font-bold">
-        {priceLabel}
+      <div>
+        <div className="flex items-baseline gap-1 font-body text-3xl font-bold">
+          {priceLabel}
+        </div>
+        {aedLabel && <p className="mt-1 text-xs text-muted">{aedLabel}</p>}
       </div>
       <p className="text-sm text-muted">{pkg.tagline}</p>
       <ul className="flex flex-1 flex-col gap-2 text-sm text-paper/90">

@@ -9,17 +9,36 @@ const STEPS = [
   {
     n: "01",
     label: "Ideas",
-    text: "A short scoping call to figure out exactly what your site needs to do, and just as important, what it doesn't.",
+    text: "A short scoping call to figure out exactly what your site needs to do, and just as important, what it doesn't. We look at who's actually landing on your site, what they're trying to accomplish, and where the current version loses them.",
   },
   {
     n: "02",
     label: "Design & develop",
-    text: "A custom build on a fixed timeline, with real progress you can see along the way, not a black box.",
+    text: "A custom build on a fixed timeline, with real progress you can see along the way, not a black box. You'll see working versions early, so nothing about the final site is a surprise.",
   },
   {
     n: "03",
     label: "Launch & beyond",
-    text: "You get a live, working site, plus a clear path for what to add next as the business grows.",
+    text: "You get a live, working site, plus a clear path for what to add next as the business grows: a blog, a booking flow, a second language, whatever comes next for you.",
+  },
+];
+
+const FIT = [
+  {
+    label: "Good fit",
+    items: [
+      "You're launching or relaunching and want it done properly, once",
+      "You have a real offer and just need the site to carry it",
+      "You'd rather pay a fair fixed price than an hourly clock",
+    ],
+  },
+  {
+    label: "Not a fit",
+    items: [
+      "You need a site live tomorrow with zero lead time",
+      "You want to manage day-to-day changes to a live app yourself, this is a website, not dev-ops",
+      "You're only comparing quotes and haven't decided to build yet",
+    ],
   },
 ];
 
@@ -51,6 +70,14 @@ export default function AboutPage() {
               packages, so you know exactly what you're getting before you book, and can go
               from an idea to a live site in a matter of weeks.
             </p>
+            <p>
+              Beyond Hello runs between Dubai and Florida, which sounds like a strange split
+              until you notice how many businesses now work exactly that way: a founder in one
+              city, customers in another, a team scattered across time zones in between. The
+              name is the point. A hello is where a relationship with a customer starts, not
+              where it ends, and a site that only manages the hello and nothing after it is
+              doing half its job.
+            </p>
           </div>
           <Link href="/book" className="btn-primary mt-10">
             Book a call →
@@ -78,6 +105,38 @@ export default function AboutPage() {
                 {step.label}
               </h3>
               <p className="text-sm leading-relaxed text-muted">{step.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Who this is for */}
+      <section className="mt-24 border-t border-line pt-16">
+        <h2 className="font-body text-xl font-bold uppercase tracking-tight">Is this a fit?</h2>
+        <p className="mt-3 max-w-xl text-sm text-muted">
+          Fixed-price, fixed-scope work goes better when expectations line up early. Here's the
+          honest version.
+        </p>
+        <div className="mt-8 grid gap-8 sm:grid-cols-2">
+          {FIT.map((group) => (
+            <div key={group.label}>
+              <span
+                className={`text-[11px] font-semibold uppercase tracking-[0.2em] ${
+                  group.label === "Good fit" ? "text-pink" : "text-muted"
+                }`}
+              >
+                {group.label}
+              </span>
+              <ul className="mt-4 flex flex-col gap-3 text-sm leading-relaxed text-paper/80">
+                {group.items.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className={group.label === "Good fit" ? "text-pink" : "text-muted"}>
+                      {group.label === "Good fit" ? "✓" : "·"}
+                    </span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

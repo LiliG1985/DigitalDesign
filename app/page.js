@@ -24,9 +24,11 @@ export default function HomePage() {
             <div className="mt-7 h-px w-10 bg-paper/30" />
             <p className="mt-7 max-w-md text-lg leading-relaxed text-muted">
               A website is the first conversation you have with a customer, so it should sound
-              like you, not like everyone else's template. We build custom, launch-ready sites
-              for founders and brands who want that first hello to land. Pick a package, book
-              your slot, and we take it from there.
+              like you, not like everyone else's template. Most visitors decide whether to stay
+              or leave within a few seconds of landing, long before they read a word of your
+              copy. We build custom, launch-ready sites for founders and brands who want that
+              first impression to actually hold up. Pick a package, book your slot, and we take
+              it from there.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-5">
@@ -60,6 +62,35 @@ export default function HomePage() {
         <div className="relative mt-16 flex flex-col gap-4 border-t border-line pt-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted sm:flex-row sm:items-center sm:justify-between">
           <span>Dubai · Florida · Worldwide</span>
           <span>Fixed pricing · Clear process · Real results</span>
+        </div>
+      </section>
+
+      {/* Why it matters */}
+      <section className="grid items-center gap-12 border-t border-line py-16 lg:grid-cols-[0.85fr_1.15fr]">
+        <div className="relative mx-auto w-full max-w-sm">
+          <div className="glow-blob absolute -bottom-8 -left-8 h-28 w-28 rounded-full bg-gradient-to-br from-blue via-violet to-pink opacity-30" />
+          <img
+            src="/images/about-hero.jpg"
+            alt="A quiet lounge corner overlooking the Dubai skyline at night"
+            className="relative w-full rounded-xl border border-line object-cover shadow-2xl"
+          />
+        </div>
+        <div>
+          <span className="eyebrow">Why it matters</span>
+          <h2 className="mt-4 font-body text-2xl font-bold uppercase tracking-tight sm:text-3xl">
+            Your site is doing the talking before you get the chance to.
+          </h2>
+          <p className="mt-5 max-w-lg text-base leading-relaxed text-paper/80">
+            By the time most customers reach out, they've already looked you up. They've formed
+            an opinion about whether you're established or just starting out, careful or
+            careless, worth the price or not, and they formed it from your site, not from
+            talking to you. A slow, generic, or outdated site quietly argues against you before
+            you've said a word.
+          </p>
+          <p className="mt-4 max-w-lg text-base leading-relaxed text-paper/80">
+            We build the version that argues for you instead: fast, custom to your business, and
+            built to carry a visitor from curious to convinced. That's the whole job.
+          </p>
         </div>
       </section>
 
