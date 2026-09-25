@@ -24,7 +24,7 @@ const FAQS = [
   },
   {
     q: "Do you work with clients outside your timezone?",
-    a: "Yes. This is a remote, worldwide studio, with roots in Dubai and Florida: calls are scheduled around your timezone, and updates happen asynchronously in between.",
+    a: "Yes. This is a remote, Dubai-based studio working with clients worldwide: calls are scheduled around your timezone, and updates happen asynchronously in between.",
   },
   {
     q: "What do you need from me to get started?",
@@ -56,6 +56,10 @@ export default function PricingPage() {
           <PricingCard key={pkg.id} pkg={pkg} />
         ))}
       </div>
+      <p className="mt-4 text-xs text-muted">
+        All prices in AED. The studio is based in Dubai and works with clients across the UAE
+        and worldwide.
+      </p>
       <a
         href="https://wa.me/971552537712"
         target="_blank"

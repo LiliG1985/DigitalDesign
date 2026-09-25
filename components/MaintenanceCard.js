@@ -8,12 +8,9 @@ export default function MaintenanceCard({ plan }) {
       </span>
       <div>
         <div className="flex items-baseline gap-1 font-body text-3xl font-bold">
-          ${plan.price}
+          AED {plan.aed.toLocaleString()}
           <span className="text-base font-medium text-muted">/{plan.period}</span>
         </div>
-        <p className="mt-1 text-xs text-muted">
-          AED {plan.aed.toLocaleString()}/{plan.period}
-        </p>
       </div>
       <p className="text-sm text-muted">{plan.tagline}</p>
       <ul className="flex flex-1 flex-col gap-2 text-sm text-paper/90">

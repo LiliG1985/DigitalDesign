@@ -58,54 +58,36 @@ export default function HomePage() {
         </div>
 
         <div className="relative mt-16 flex flex-col gap-4 border-t border-line pt-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted sm:flex-row sm:items-center sm:justify-between">
-          <span>Dubai · Florida · Worldwide</span>
+          <span>Dubai, UAE · Worldwide clients</span>
           <span>Fixed pricing · Clear process · Real results</span>
         </div>
       </section>
 
-      {/* Region picker */}
+      {/* Where we work */}
       <section className="border-t border-line py-16">
         <div className="mb-8 max-w-lg">
-          <span className="eyebrow">Two locations</span>
+          <span className="eyebrow">Where we work</span>
           <h2 className="mt-4 font-body text-xl font-bold uppercase tracking-tight sm:text-2xl">
-            Dubai, UAE and Florida, USA
+            Dubai-based, built for anywhere
           </h2>
         </div>
-        <div className="grid gap-5 sm:grid-cols-2">
-          <Link
-            href="/uae"
-            className="group flex items-center justify-between gap-4 rounded-lg border border-line bg-card p-6 transition-colors hover:border-pink"
-          >
-            <div>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
-                🇦🇪 Dubai, UAE
-              </span>
-              <p className="mt-2 text-sm text-muted">
-                Packages priced in AED, local time zone, WhatsApp on hand.
-              </p>
-            </div>
-            <span className="text-xl text-paper/60 transition-transform group-hover:translate-x-1">
-              →
+        <Link
+          href="/pricing"
+          className="group flex items-center justify-between gap-4 rounded-lg border border-line bg-card p-6 transition-colors hover:border-pink"
+        >
+          <div>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
+              🇦🇪 Dubai, UAE
             </span>
-          </Link>
-
-          <Link
-            href="/usa"
-            className="group flex items-center justify-between gap-4 rounded-lg border border-line bg-card p-6 transition-colors hover:border-blue"
-          >
-            <div>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
-                🇺🇸 Florida, USA
-              </span>
-              <p className="mt-2 text-sm text-muted">
-                Packages priced in USD, built around US business hours.
-              </p>
-            </div>
-            <span className="text-xl text-paper/60 transition-transform group-hover:translate-x-1">
-              →
-            </span>
-          </Link>
-        </div>
+            <p className="mt-2 text-sm text-muted">
+              Packages priced in AED, local time zone, WhatsApp on hand. We take on clients
+              across the UAE and worldwide, all remote.
+            </p>
+          </div>
+          <span className="text-xl text-paper/60 transition-transform group-hover:translate-x-1">
+            →
+          </span>
+        </Link>
       </section>
 
       {/* Why it matters */}

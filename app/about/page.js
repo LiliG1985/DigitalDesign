@@ -71,12 +71,10 @@ export default function AboutPage() {
               from an idea to a live site in a matter of weeks.
             </p>
             <p>
-              Beyond Hello runs between Dubai and Florida, which sounds like a strange split
-              until you notice how many businesses now work exactly that way: a founder in one
-              city, customers in another, a team scattered across time zones in between. The
-              name is the point. A hello is where a relationship with a customer starts, not
-              where it ends, and a site that only manages the hello and nothing after it is
-              doing half its job.
+              Beyond Hello is based in Dubai, but the work isn't limited to it: clients come from
+              across the UAE and from around the world, all handled remotely. The name is the
+              point. A hello is where a relationship with a customer starts, not where it ends,
+              and a site that only manages the hello and nothing after it is doing half its job.
             </p>
           </div>
           <Link href="/book" className="btn-primary mt-10">

@@ -65,7 +65,7 @@ export default function BookingForm({ initialPackage }) {
         >
           {PACKAGE_LIST.map((p) => (
             <option key={p.id} value={p.id}>
-              {p.name} · {p.price ? `$${p.price.toLocaleString()}` : `from $${p.priceFrom.toLocaleString()}`}
+              {p.name} · {p.aed ? `AED ${p.aed.toLocaleString()}` : `from AED ${p.aedFrom.toLocaleString()}`}
             </option>
           ))}
         </select>
@@ -151,7 +151,7 @@ export default function BookingForm({ initialPackage }) {
       <button type="submit" disabled={status === "loading"} className="btn-primary disabled:opacity-60">
         {status === "loading"
           ? "Redirecting to secure checkout…"
-          : `Pay $${pkg?.deposit.toLocaleString()} deposit to book →`}
+          : `Pay AED ${pkg?.deposit.toLocaleString()} deposit to book →`}
       </button>
       <p className="text-xs text-muted">
         You'll pay securely via Stripe. This deposit locks your build slot, and the remaining

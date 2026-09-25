@@ -42,7 +42,7 @@ export async function POST(request) {
       line_items: [
         {
           price_data: {
-            currency: "usd",
+            currency: "aed",
             unit_amount: Math.round(depositAmount * 100),
             product_data: {
               name: `${pkg.name} package: booking deposit`,

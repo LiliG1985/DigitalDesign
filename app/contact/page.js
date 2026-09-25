@@ -41,7 +41,7 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-14 flex flex-wrap gap-x-10 gap-y-4 border-t border-line pt-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
-            <span>Dubai · Florida · Worldwide</span>
+            <span>Dubai, UAE · Worldwide clients</span>
             <span>Replies within 1 business day</span>
           </div>
         </div>

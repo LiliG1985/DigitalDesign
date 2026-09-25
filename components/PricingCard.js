@@ -1,15 +1,8 @@
 import Link from "next/link";
 
-export default function PricingCard({ pkg, primaryCurrency = "usd", singleCurrency = false }) {
-  const usdLabel = pkg.price ? `$${pkg.price.toLocaleString()}` : `From $${pkg.priceFrom.toLocaleString()}`;
+export default function PricingCard({ pkg }) {
   const aedValue = pkg.aed || pkg.aedFrom;
-  const aedLabel = aedValue
-    ? `${pkg.aedFrom ? "From " : ""}AED ${aedValue.toLocaleString()}`
-    : null;
-
-  const showAedFirst = primaryCurrency === "aed" && aedLabel;
-  const primaryLabel = showAedFirst ? aedLabel : usdLabel;
-  const secondaryLabel = singleCurrency ? null : showAedFirst ? usdLabel : aedLabel;
+  const priceLabel = `${pkg.aedFrom ? "From " : ""}AED ${aedValue.toLocaleString()}`;
 
   return (
     <div
@@ -22,9 +15,8 @@ export default function PricingCard({ pkg, primaryCurrency = "usd", singleCurren
       </span>
       <div>
         <div className="flex items-baseline gap-1 font-body text-3xl font-bold">
-          {primaryLabel}
+          {priceLabel}
         </div>
-        {secondaryLabel && <p className="mt-1 text-xs text-muted">{secondaryLabel}</p>}
       </div>
       <p className="text-sm text-muted">{pkg.tagline}</p>
       <ul className="flex flex-1 flex-col gap-2 text-sm text-paper/90">

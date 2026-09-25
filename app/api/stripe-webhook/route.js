@@ -20,12 +20,12 @@ async function notifyByEmail(session) {
       body: JSON.stringify({
         from: "Beyond Hello Bookings <bookings@resend.dev>",
         to: [process.env.NOTIFY_EMAIL],
-        subject: `New booking: ${m.packageName || "package"}, $${amount} deposit paid`,
+        subject: `New booking: ${m.packageName || "package"}, AED ${amount} deposit paid`,
         text: [
           `New paid booking on Beyond Hello.`,
           ``,
           `Package: ${m.packageName || "-"}`,
-          `Deposit paid: $${amount}`,
+          `Deposit paid: AED ${amount}`,
           `Name: ${m.name || "-"}`,
           `Email: ${m.email || "-"}`,
           `Company: ${m.company || "-"}`,
