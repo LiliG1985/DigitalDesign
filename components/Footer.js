@@ -8,7 +8,7 @@ const SOCIALS = [
   { label: "WhatsApp", href: "https://wa.me/971552537712" },
   { label: "Instagram", href: "#" },
   { label: "LinkedIn", href: "#" },
-  { label: "Email", href: "mailto:hello@beyondhello.digital" },
+  { label: "Email", href: "mailto:hello@beyondhello.studio" },
 ];
 
 export default function Footer() {
@@ -18,7 +18,7 @@ export default function Footer() {
     e.preventDefault();
     const subject = encodeURIComponent("Keep me posted, Beyond Hello");
     const body = encodeURIComponent(`Please add me to the list: ${email}`);
-    window.location.href = `mailto:hello@beyondhello.digital?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hello@beyondhello.studio?subject=${subject}&body=${body}`;
   }
 
   return (

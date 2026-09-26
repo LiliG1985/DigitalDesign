@@ -5,8 +5,7 @@ export const metadata = {
   description: "Get in touch with Beyond Hello.",
 };
 
-// TODO (Lili): swap in your real inbox once the domain is set up.
-const CONTACT_EMAIL = "hello@beyondhello.digital";
+const CONTACT_EMAIL = "hello@beyondhello.studio";
 const WHATSAPP_LINK = "https://wa.me/971552537712";
 
 export default function ContactPage() {
