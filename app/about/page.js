@@ -51,7 +51,7 @@ export default function AboutPage() {
           <h1 className="mt-5 font-body text-4xl font-extrabold uppercase leading-[1.05] tracking-tight sm:text-5xl">
             It started with
             <br />
-            <span className="text-gradient">a hello.</span>
+            <span className="text-gradient">hello.</span>
           </h1>
           <div className="mt-7 flex flex-col gap-5 text-lg leading-relaxed text-paper/80">
             <p>
