@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata = {
   title: "Contact · Beyond Hello",
@@ -6,7 +7,6 @@ export const metadata = {
 };
 
 const CONTACT_EMAIL = "hello@beyondhello.studio";
-const WHATSAPP_LINK = "https://wa.me/971552537712";
 
 export default function ContactPage() {
   return (
@@ -19,18 +19,10 @@ export default function ContactPage() {
           </h1>
           <p className="mt-6 max-w-md text-lg leading-relaxed text-paper/80">
             The fastest way to get started is to book a package directly. Got questions first?
-            Reach out here.
+            Send a message below.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center">
-            <a
-              href={WHATSAPP_LINK}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-primary"
-            >
-              Message us on WhatsApp
-            </a>
             <a href={`mailto:${CONTACT_EMAIL}`} className="btn-secondary">
               {CONTACT_EMAIL}
             </a>
@@ -54,6 +46,16 @@ export default function ContactPage() {
           />
         </div>
       </div>
+
+      <section className="mt-20 border-t border-line pt-16">
+        <h2 className="font-body text-xl font-bold uppercase tracking-tight">Send a message</h2>
+        <p className="mt-3 max-w-xl text-sm text-muted">
+          Tell us a bit about what you need. We reply by email within 1 business day.
+        </p>
+        <div className="mt-8 max-w-xl">
+          <ContactForm />
+        </div>
+      </section>
     </main>
   );
 }
