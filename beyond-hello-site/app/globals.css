@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #08080b;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff2f7e 0%, #ffb04d 50%, #34a6ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-md border border-paper/25 px-7 py-4 font-body text-xs font-bold uppercase tracking-[0.15em] text-paper transition-colors hover:border-pink hover:text-pink disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center gap-2 font-body text-xs font-bold uppercase tracking-[0.15em] text-muted underline decoration-1 underline-offset-4 transition-colors hover:text-paper;
+}
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 rounded-full border border-line px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted;
+}
+
+.glow-blob {
+  filter: blur(60px);
+  pointer-events: none;
+}
