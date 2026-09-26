@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const links = [
@@ -14,10 +15,17 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="relative py-8">
+    <nav className="relative py-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
-        <Link href="/" className="font-body text-lg tracking-tight text-paper" onClick={() => setOpen(false)}>
-          beyond<span className="text-pink">.</span>hello<span className="text-pink">.</span>
+        <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <Image
+            src="/images/logo-wordmark.png"
+            alt="Beyond Hello Studio"
+            width={609}
+            height={296}
+            priority
+            className="h-16 w-auto sm:h-24"
+          />
         </Link>
         <div className="flex items-center gap-8">
           <ul className="hidden gap-7 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted sm:flex">

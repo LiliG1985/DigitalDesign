@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 // TODO (Lili): swap in your real Instagram / LinkedIn URLs once you have them.
@@ -30,6 +31,14 @@ export default function Footer() {
         className="absolute inset-0 h-full w-full object-cover opacity-30"
       />
       <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/95 to-ink/60" />
+      <Image
+        src="/images/logo-bh.png"
+        alt=""
+        aria-hidden="true"
+        width={686}
+        height={370}
+        className="relative mb-8 h-12 w-auto"
+      />
       <div className="relative flex flex-col gap-8 border-b border-line pb-12 sm:flex-row sm:items-end sm:justify-between">
         <h2 className="max-w-sm font-body text-2xl font-bold uppercase tracking-tight sm:text-3xl">
           Let's build something bolder
