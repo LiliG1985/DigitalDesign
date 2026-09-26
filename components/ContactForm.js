@@ -3,6 +3,11 @@
 import { useState } from "react";
 
 const CONTACT_EMAIL = "hello@beyondhello.studio";
+// Web3Forms access keys are meant to be public (same idea as a reCAPTCHA site key):
+// submissions are only accepted from the registered website domain, which requires
+// this to run in the visitor's own browser rather than being proxied through our server.
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -23,26 +28,32 @@ export default function ContactForm() {
     setStatus("loading");
     setError("");
 
+    if (!WEB3FORMS_ACCESS_KEY) {
+      openMailFallback();
+      return;
+    }
+
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New enquiry from ${name}`,
+          from_name: "Beyond Hello website",
+          name,
+          email,
+          message,
+        }),
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.success) {
         setStatus("sent");
         return;
       }
 
-      const data = await res.json().catch(() => ({}));
-      if (res.status === 400) {
-        setStatus("idle");
-        setError(data.error || "Please check the form and try again.");
-        return;
-      }
-
-      // Not configured yet, or a server hiccup, so fall back to email.
       openMailFallback();
     } catch {
       openMailFallback();
